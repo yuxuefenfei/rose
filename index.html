@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#eeeee7" />
+    <meta name="description" content="红白玫瑰与满天星组成的手绑花束，可以从任意角度旋转欣赏。" />
+    <title>一束玫瑰 · Bouquet study</title>
+    <link rel="icon" type="image/svg+xml" href="/rose.svg" />
+  </head>
+  <body>
+    <main class="study">
+      <div id="viewport" class="viewport" aria-label="交互式三维玫瑰"></div>
+      <header class="masthead">
+        <a class="brand" href="/" aria-label="玫瑰研究室首页">
+          <svg viewBox="0 0 32 38" aria-hidden="true"><path d="M16 23v13m0-5C6 32 5 26 5 26c8-2 11 5 11 5Zm0-7c10 1 11-6 11-6-8-1-11 6-11 6ZM16 3c-6-4-12 2-9 7-7 4-2 12 4 11 3 5 11 4 12-2 7-1 8-10 2-12 0-6-6-8-9-4Zm-5 6c3-5 10-2 10 3 0 6-9 7-10 1-1-3 3-5 5-3"/></svg>
+          <span>花间<span class="brand-en">BOTANICAL STUDIES</span></span>
+        </a>
+        <button id="about-open" class="text-button" aria-haspopup="dialog">关于这束花 <span aria-hidden="true">↗</span></button>
+      </header>
+      <section class="introduction" aria-labelledby="title">
+        <p class="edition">ROSA · 蔷薇属</p>
+        <h1 id="title">一束<br />玫瑰。</h1>
+        <p class="lede">红与白之间，<br />缀满细碎的星光。</p>
+        <div class="specimen-note"><span class="red-line"></span><span>红白玫瑰 · 满天星<span class="latin-name">Rosa &amp; Gypsophila</span></span></div>
+      </section>
+      <div class="view-presets" role="group" aria-label="观察视角">
+        <span class="rail-label">观察视角</span>
+        <button data-view="whole" class="preset is-selected" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5M8 8h8v8H8z"/></svg><span>全束</span></button>
+        <button data-view="bloom" class="preset" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8c-7-6-12 3-5 6-2 7 9 10 10 2 8-2 6-11-2-9-1-7-10-6-10 1m7 0c6 0 6 8 0 8s-6-8 0-8Z"/></svg><span>花冠</span></button>
+        <button data-view="top" class="preset" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="14" rx="8" ry="5"/><path d="M12 2v7m-3-3 3 3 3-3"/></svg><span>俯视</span></button>
+      </div>
+      <div class="bottom-area">
+        <div class="gesture-hint"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="6"/><path d="M12 6v4"/></svg><span>拖动旋转<span class="hint-divider">/</span>滚轮缩放</span></div>
+        <div class="toolbar" role="group" aria-label="玫瑰展示控制">
+          <button id="rotate" class="rotate-button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 8a8 8 0 1 0 1 7M19 3v6h-6"/></svg><span>自动旋转</span><span class="toggle-track" aria-hidden="true"><span></span></span></button>
+          <span class="toolbar-divider"></span>
+          <button id="reset" class="icon-button" aria-label="复位视角" title="复位视角"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M6 9v11h12V9m-9 11v-7h6v7"/></svg></button>
+          <button id="zoom-in" class="icon-button" aria-label="放大" title="放大"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></button>
+          <button id="zoom-out" class="icon-button" aria-label="缩小" title="缩小"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/></svg></button>
+        </div>
+        <p class="view-caption"><span class="live-dot"></span><span id="view-label">自由观察</span><span class="caption-rule"></span><span>360°</span></p>
+      </div>
+      <footer class="colophon"><span>自然的细节，值得细看。</span><span>A BOUQUET, IN EVERY DIMENSION</span></footer>
+      <div id="loading" class="loading" role="status"><span class="loading-flower">✳</span>正在整理这束花…</div>
+      <div id="error" class="error-panel" role="alert" hidden><h2>三维画面未能启动</h2><p id="error-message">请使用支持 WebGL 的浏览器，并在设置中开启硬件加速后刷新。</p><button id="reload" class="text-button">重新加载 ↗</button></div>
+      <dialog id="about" aria-labelledby="about-title">
+        <button id="about-close" class="icon-button dialog-close" aria-label="关闭说明">×</button>
+        <p class="edition">ABOUT THIS STUDY</p><h2 id="about-title">细看一束玫瑰</h2>
+        <p>六朵深红、五朵象牙白玫瑰错落组成圆润的花冠。层叠花瓣围绕螺旋花心舒展，满天星从花朵间探出细小的白花；下方的花萼、锯齿绿叶与收拢花茎，以酒红色缎带系成一束。</p>
+        <p>鼠标拖动或单指滑动可旋转，滚轮或双指捏合可缩放。选中画布后，也可用方向键旋转、加减键缩放，按 Home 复位。</p>
+        <p class="about-footnote">程序化艺术模型 · 非特定品种的植物学复刻</p>
+      </dialog>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

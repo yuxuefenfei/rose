@@ -1,0 +1,29 @@
+:root {
+  --color-paper: oklch(94.5% 0.009 108);
+  --color-surface: oklch(97.5% 0.006 108);
+  --color-ink: oklch(27% 0.023 148);
+  --color-muted: oklch(48% 0.016 133);
+  --color-rule: oklch(80% 0.013 108);
+  --color-accent: oklch(43% 0.136 9);
+  --color-focus: oklch(42% 0.11 149);
+  --color-active: oklch(89.5% 0.022 132);
+  --color-stage-center: #eeeee7;
+  --color-stage-edge: #e4e6db;
+  --color-shadow: oklch(25% 0.02 130 / 0.07);
+  --font-display: 'Baskerville', 'Palatino Linotype', 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  --font-body: 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --page-gutter: clamp(22px, 4.2vw, 72px);
+  --text-xs: 10px;
+  --text-sm: 12px;
+  --text-base: 14px;
+  --radius-control: 6px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-micro: 120ms;
+  --dur-short: 240ms;
+}
